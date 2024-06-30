@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import TopBar from './TopBar';
 import Starfield from 'react-starfield';
 
 
@@ -9,13 +9,16 @@ import Starfield from 'react-starfield';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Starfield
-        starCount={1000}
+    <div>
+    <Starfield
+        starCount={1500}
         starColor={[255, 255, 255]}
-        speedFactor={0.05}
+        speedFactor={0.08}
         backgroundColor="black"
         /> 
-   <App/>
+   <TopBar/>
+    </div>
+   
     
   </React.StrictMode>
 );
