@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import TopBar from './TopBar';
+import Myself from './Myself'
 import Starfield from 'react-starfield';
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +17,7 @@ root.render(
         backgroundColor="black"
         /> 
    <TopBar/>
+   <Myself/>
     </div>
    
     

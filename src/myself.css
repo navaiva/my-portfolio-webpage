@@ -1,0 +1,19 @@
+.whole {
+   border: 1px solid red;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+}
+
+
+.right-s {
+    border: 1px solid green;
+    height: 100vh;
+    width: 50%;
+}
+
+.left-s {
+    border: 1px solid yellow;
+    height: 100vh;
+    width: 50%;
+}
