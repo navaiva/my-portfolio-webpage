@@ -1,6 +1,6 @@
 .whole {
    border: 1px solid red;
-   height: 100vh;
+   height: 90vh;
    width: 100%;
    display: flex;
 }
@@ -8,17 +8,96 @@
 
 .right-s {
     border: 1px solid green;
-    height: 100vh;
+    height: 90vh;
     width: 50%;
 }
 
 .left-s {
     /* border: 1px solid yellow; */
-    height: 100vh;
+    height: 90vh;
     width: 50%;
+    display: grid;
+    place-items: center;
 }
 
 canvas {
     /* width: 100vh !important; */
     height: 100vh !important;
 }
+
+@media only screen and (max-width: 600px) {
+    .right-s {
+       display: none; /* Hidden on screens smaller than 600px */
+     }
+   }
+
+   @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.Fh1, .Sh1, .Th1 {
+
+    color: aqua;
+}
+
+.Fh1 {
+    opacity: 0;
+  animation-name: fadeIn, typing;
+  animation-duration: 1s, 1.5s; /* Adjust as needed */
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 0s;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(15, end) forwards;
+    border-right: 2px solid black; 
+  /* animation: typing 1.5s steps(30, end) forwards,
+              blinking 1s infinite; */
+              animation-duration: 1s;
+
+}
+
+.Sh1
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    aqua 0%,
+    #44107a 29%,
+    aqua 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+.Th1 {
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes blinking {
+    0%, 50% { border-color: transparent }
+    51%, 100% { border-color: rgb(13, 14, 14) } 
+  }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 57% }
+  }
+  
