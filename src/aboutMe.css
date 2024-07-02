@@ -1,0 +1,17 @@
+.about-me{
+   
+   height: 90vh;
+   width: 100%;
+   display: grid;
+    place-items: center;
+}
+
+.about{
+    color: aqua;
+    font-size: 25px;
+}
+
+.about-1 {
+    color: aquamarine;
+    font-size: 35px;
+}

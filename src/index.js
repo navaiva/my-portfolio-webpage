@@ -4,6 +4,7 @@ import './index.css';
 import TopBar from './TopBar';
 import Myself from './Myself'
 import Starfield from 'react-starfield';
+import AboutMe from './AboutMe'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
         /> 
    <TopBar/>
    <Myself/>
+   <AboutMe/>
     </div>
    
     
