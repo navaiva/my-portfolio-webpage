@@ -5,6 +5,7 @@ import TopBar from './TopBar';
 import Myself from './Myself'
 import Starfield from 'react-starfield';
 import AboutMe from './AboutMe'
+import Projects from './Projects'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
    <TopBar/>
    <Myself/>
    <AboutMe/>
+   <Projects/>
     </div>
    
     
