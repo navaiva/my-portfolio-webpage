@@ -1,35 +1,58 @@
-import './projects.css'
+import './projects.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, {useRef} from 'react';
+import Slider from 'react-slick';
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-    slidesToSlide: 1
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-    slidesToSlide: 1
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1
-  }
+const App = () => {
+  const sliderRef = useRef(null)
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    afterChange: current => console.log(current),
+  };
+
+  const navButtons = [
+    { id: 0, label: '1' },
+    { id: 1, label: '2' },
+    { id: 2, label: '3' },
+  ];
+
+  const goToSlide = index => {
+    sliderRef.current.slickGoTo(index);
+  };
+
+  return (
+    <div className='projects-whole'>
+      <h1 className='name-projects-h1'>projects</h1>
+    <div className="slider-container">
+      <Slider ref={sliderRef} {...settings}>
+        <div className='projects-'>
+          <div className='P-name'></div>
+          <div className='p-picture'></div>
+          <div className='p-description'></div>
+          <div className='p-stack'></div>
+          <div className='p-links'></div>
+        </div>
+        <div className='projects-'>Div 2 Content</div>
+        <div className='projects-'>Div 3 Content</div>
+      </Slider>
+      <div className="nav-buttons">
+        {navButtons.map(button => (
+          <button key={button.id} onClick={() => goToSlide(button.id)}>
+            {button.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    </div>
+  );
 };
 
-function App() {
-  
-      return (
-        <div className='swiper'>
-          <div className='projects'> projects </div>
-          <div className='slider'></div>
-          
-        </div>
-      );
-    }
-    
-    export default App;
+export default App;

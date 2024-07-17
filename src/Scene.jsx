@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/code-bonnie-74eef9e3b2b64ac891492c007a74
 Title: CoDe BoNnIe
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
