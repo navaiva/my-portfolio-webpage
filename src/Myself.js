@@ -16,7 +16,7 @@ function App() {
 
 
     return (
-      <div className="whole">
+      <div className="myself-">
         <div className="left-s">
           <h1 className="Fh1">Hi, I'm Ivan Navarro</h1>
           <h1 className="Sh1">Software Engineer</h1>

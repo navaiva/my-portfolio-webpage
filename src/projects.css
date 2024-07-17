@@ -1,95 +1,82 @@
-.slider-container {
-    height: 80%;
-    width: 85%;
-    border: 1px solid pink;
-    /* flex: grid;
-    justify-content: center;
-    align-items: center; */
-    margin: 50px;
-    margin-top: 3px;
-    box-shadow: 0 0 5px aqua,
-                 0 0 15px aqua,
-                 0 0 25px aqua;
-                 border-radius: 2em;
-  }
+.projects{
+  margin-top: -5px;
+  height: 100vh;
+  width: 100%;
+  /* border: 1px solid yellow; */
+}
 
-  .slick-slider {
-    width: 100%;
-    height: 100%;
-    
-
-  }
-
-  .slick-list{
-    width: 100%;
-    height: 100%;
-    border: 1px solid blue
-  }
-
-  .slick-track {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgb(255, 0, 43)
-  }
-
-  .slick-slide {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgb(248, 5, 167);
-  }
-  
-  .nav-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .nav-buttons button {
-    background-color: #ddd;
-    border: none;
-    padding: 10px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-
-  .projects-{
-    color: blueviolet;
-    width: 100%;
-    height: 100%;
-    border: 1px solid green;
-  }
-
-
-  .P-name {
-    width: 100vh;
-    height: 100%;
-    border: 3px solid white;
-  }
-
-  .projects-whole{
-    height: 100vh;
-    width: 100%;
-    border: 1px solid yellow;
-    /* display: grid;
-    place-items: center;
-    align-items: center; */
-
-  }
-  
-  .name-projects-h1{
-    color: black;
-    text-shadow:
-      0 0 2px white, /* Closest white glow */
-      0 0 5px #fff,
-      0 0 9px white,
-      0 0 13px #0fa, /* Start of the green glow */
-      0 0 17px #0fa,
-      0 0 20px #0fa,
-      0 0 23px #00CCFF,
-      0 0 27px #00CCFF; /* Furthest green glow */
-
-      text-align: center;
-      font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+.P-presentation{
+  color: black;
+  text-shadow:
+    0 0 2px white, /* Closest white glow */
+    0 0 5px #fff,
+    0 0 9px white,
+    0 0 13px #0fa, /* Start of the green glow */
+    0 0 17px #0fa,
+    0 0 20px #0fa,
+    0 0 23px #00CCFF,
+    0 0 27px #00CCFF; /* Furthest green glow */
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
     font-size: 45px;
-    margin-top: 2px;
-  }
+    text-align: center;
+}
+
+.slick-slider{
+  /* border: 1px solid pink; */
+  width: 95%;
+  height: 80%;
+  margin: 20px;
+}
+
+.slick-list {
+  /* border: 1px solid green; */
+  height: 100%;
+  width: 100%;
+}
+
+.slick-track {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  content: '';
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  background: #00CCFF;
+  color: #fcf8f7;
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:hover:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  background: #00CCFF; /* Active dot color */
+  color: #00CCFF;
+}
+
+.slick-dots li button{
+background: #00CCFF;
+color: #00CCFF;
+}
+
+ 
+.slick-dots {
+  bottom: -20px; /* Adjust the position of the dots */
+  display: block;
+  width: 100%;
+  text-align: center;
+  
+
+
+}

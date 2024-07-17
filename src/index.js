@@ -6,6 +6,9 @@ import Myself from './Myself'
 import Starfield from 'react-starfield';
 import AboutMe from './AboutMe'
 import Projects from './Projects'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

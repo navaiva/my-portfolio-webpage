@@ -1,0 +1,23 @@
+.P-card {
+    /* border: 1px solid brown; */
+    /* overflow: hidden; */
+    margin: 5px;
+    margin-left: 80px;
+    width: 80vw; /* 80% of the viewport width */
+    height: auto;
+}
+  
+  .P-card img {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .try{
+    height: 76vh;
+    
+    box-shadow: 0 0 5px aqua,
+                 0 0 15px aqua,
+                 0 0 25px aqua;
+                 border-radius: 2em;
+  }
