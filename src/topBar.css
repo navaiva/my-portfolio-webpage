@@ -2,13 +2,13 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 40px;
+  height: 55px;
   /* box-shadow: 0 0 5px aqua,
                  0 0 10px aqua,
                  0 0 10px aqua;
                  border-radius: 2em; */
   /* border: 1px solid #15f4ee; */
-  margin-bottom: 14px;
+
 }
 
 .links {
@@ -17,45 +17,79 @@
   width: 20%;
   height: 40px;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: center; 
   align-items:flex-center; 
+  
   
   
 }
 
-.threeDots {
-  /* border: 1px solid red; */
+/* .threeDots {
+  
   width: 4%;
   height: 30px;
   display: flex;
   justify-content: flex-center;
 
-}
+} */
 
 .git {
-  margin-top: 4px;
+  margin-top: 7px;
   font-size: 160%;
-  color: aqua;
- 
+  color: #00CCFF;
+  /* box-shadow: 0 0 20px #00CCFF; */
+  border-radius: 4em;
   
 }
 
+.git:hover {
+  box-shadow: 0 0 5px #00CCFF, 0 0 10px #00CCFF, 0 0 20px #00CCFF, 0 0 30px #00CCFF; 
+  transform: scale(1.1);
+  .sizeclasse{
+    transform: scale(1.2);
+    
+  }
+  
+}
+
+.linkedin:hover {
+  box-shadow: 0 0 5px #00CCFF, 0 0 10px #00CCFF, 0 0 20px #00CCFF, 0 0 30px #00CCFF;
+  .sizeclasse{
+    transform: scale(1.2);
+    
+  }
+   
+}
+
+.threeDots:hover { 
+  color: white;
+  border-radius: 25%;
+  .sizeclasse{
+    transform: scale(1.2);
+    
+  }
+}
+
+
+
 .linkedin {
-  float: right;
-  margin-left: 10px;
+  margin-top: 7px;
+  font-size: 160%;
+  margin-inline: 30px;
+  /* border: 1px solid #11e93f ; */
+  color: #00CCFF;
+  border-radius: 50%;
+  
  
 
 }
 
 .threeDots {
-  margin-top: 4px;
-  color: aqua;
+  /* border: 2px solid yellow; */
+  margin-top: 7px;
+  color: #00CCFF;
   font-size: 160%;
-  margin-left: 10px;
+  
 }
 
-@media only screen and (max-width: 600px) {
-  .links {
-     display: none; /* Hidden on screens smaller than 600px */
-   }
- }
+
