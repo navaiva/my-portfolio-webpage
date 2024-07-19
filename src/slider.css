@@ -9,8 +9,10 @@
 }
 
 .project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  text-align: center;
   width: 85%;
   height: 75vh;
   margin-left: 95px;
@@ -19,14 +21,114 @@
   /* border: 2px solid green; */
   box-shadow: 0 0 5px #00CCFF,
                  0 0 15px  #00CCFF,
-                 0 0 25px #00ffff;
+                 0 0 25px #00CCFF;
                  border-radius: 2em;
 }
 
+.projects-Right {
+  height: 70vh;
+  width: 50%;
+  /* border: 1px solid green; */
+  margin-left: 100px;
+}
+
+.description-P {
+  color: #00CCFF;
+  text-shadow:
+    0 0 2px black, /* Closest white glow */
+    0 0 5px black,
+    0 0 9px white,
+    0 0 13px #0fa, /* Start of the green glow */
+    0 0 17px black,
+    0 0 20px black,
+    0 0 23px black,
+    0 0 27px black; /* Furthest green glow */
+    font-size: 30px;
+    /* padding-left: 40px;
+    padding-right: 5%; */
+    font-family: 'Roboto Slab', Arial, sans-serif;
+    text-align: center;
+}
+
+.title-P {
+  color: black;
+  text-shadow:
+    0 0 2px white, /* Closest white glow */
+    0 0 5px #fff,
+    0 0 9px white,
+    0 0 13px #0fa, /* Start of the green glow */
+    0 0 17px #0fa,
+    0 0 20px #0fa,
+    0 0 23px #00CCFF,
+    0 0 27px #00CCFF; /* Furthest green glow */
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tech-icon {
+  font-size: 35px;
+  height: 35px;
+  width: 35px;
+  margin: 15px;
+  color: #00CCFF;
+  display: grid;
+  justify-content: flex-start ;
+  align-items: flex-start;
+  /* border: 1px solid #00CCFF;
+  border-radius: 1em; */
+}
+
+
 .project-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  /* max-width: 100%; */
+  width: 350px; 
+  height: 350px;
+  /* border: 1px solid #00CCFF; */
+  box-shadow: 0 0 5px #00CCFF,
+                 0 0 15px  #00CCFF,
+                 0 0 25px #00CCFF;
+                 border-radius: 2em;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 350px;
+  margin-left: 0px;
+  /* border: 1px solid #00CCFF; */
+
+}
+
+.stack-names {
+  color: black;
+  text-shadow:
+    0 0 2px white, /* Closest white glow */
+    0 0 5px #fff,
+    0 0 9px white,
+    0 0 13px #0fa, /* Start of the green glow */
+    0 0 17px #0fa,
+    0 0 20px #0fa,
+    0 0 23px #00CCFF,
+    0 0 27px #00CCFF; /* Furthest green glow */
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  
+}
+
+.stack-container{
+/* border: 1px solid orange; */
+height: 30vh;
+width: 80%;
+margin: 50px;
 }
 
 .arrow-btn {
@@ -58,6 +160,8 @@
 
 .slick-dots {
   bottom: 10px; 
+  align-items: center;
+  
 }
 
 .slick-dots li button:before {
@@ -68,6 +172,25 @@
   color: #00CCFF; 
 }
 
+.stack-box {
+  
+  width: 100%;
+  height: 82%;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stack-box :hover {
+  color: white;
+
+}
+
 body {
   background: #111;
 }
+
+
+
+
