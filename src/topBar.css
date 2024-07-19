@@ -8,7 +8,6 @@
                  0 0 10px aqua;
                  border-radius: 2em; */
   /* border: 1px solid #15f4ee; */
-
 }
 
 .links {
@@ -17,11 +16,8 @@
   width: 20%;
   height: 40px;
   display: flex;
-  justify-content: center; 
-  align-items:flex-center; 
-  
-  
-  
+  justify-content: center;
+  align-items: flex-center;
 }
 
 /* .threeDots {
@@ -36,60 +32,48 @@
 .git {
   margin-top: 7px;
   font-size: 160%;
-  color: #00CCFF;
+  color: #00ccff;
   /* box-shadow: 0 0 20px #00CCFF; */
   border-radius: 4em;
-  
 }
 
 .git:hover {
-  box-shadow: 0 0 5px #00CCFF, 0 0 10px #00CCFF, 0 0 20px #00CCFF, 0 0 30px #00CCFF; 
+  box-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #00ccff,
+    0 0 30px #00ccff;
   transform: scale(1.1);
-  .sizeclasse{
+  .sizeclasse {
     transform: scale(1.2);
-    
   }
-  
 }
 
 .linkedin:hover {
-  box-shadow: 0 0 5px #00CCFF, 0 0 10px #00CCFF, 0 0 20px #00CCFF, 0 0 30px #00CCFF;
-  .sizeclasse{
+  box-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #00ccff,
+    0 0 30px #00ccff;
+  .sizeclasse {
     transform: scale(1.2);
-    
   }
-   
 }
 
-.threeDots:hover { 
+.threeDots:hover {
   color: white;
   border-radius: 25%;
-  .sizeclasse{
+  .sizeclasse {
     transform: scale(1.2);
-    
   }
 }
-
-
 
 .linkedin {
   margin-top: 7px;
   font-size: 160%;
   margin-inline: 30px;
   /* border: 1px solid #11e93f ; */
-  color: #00CCFF;
+  color: #00ccff;
   border-radius: 50%;
-  
- 
-
 }
 
 .threeDots {
   /* border: 2px solid yellow; */
   margin-top: 7px;
-  color: #00CCFF;
+  color: #00ccff;
   font-size: 160%;
-  
 }
-
-

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 540px; 
+  height: 540px;
   /* border: 2px solid red; */
   border-radius: 10px;
   /* background-color: #f0f0f0;  */
@@ -16,13 +16,11 @@
   width: 85%;
   height: 75vh;
   margin-left: 95px;
-  
+
   /* padding: 20px; */
   /* border: 2px solid green; */
-  box-shadow: 0 0 5px #00CCFF,
-                 0 0 15px  #00CCFF,
-                 0 0 25px #00CCFF;
-                 border-radius: 2em;
+  box-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 25px #00ccff;
+  border-radius: 2em;
 }
 
 .projects-Right {
@@ -33,35 +31,23 @@
 }
 
 .description-P {
-  color: #00CCFF;
-  text-shadow:
-    0 0 2px black, /* Closest white glow */
-    0 0 5px black,
-    0 0 9px white,
-    0 0 13px #0fa, /* Start of the green glow */
-    0 0 17px black,
-    0 0 20px black,
-    0 0 23px black,
-    0 0 27px black; /* Furthest green glow */
-    font-size: 30px;
-    /* padding-left: 40px;
+  color: #00ccff;
+  text-shadow: 0 0 2px black, /* Closest white glow */ 0 0 5px black,
+    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px black,
+    0 0 20px black, 0 0 23px black, 0 0 27px black; /* Furthest green glow */
+  font-size: 30px;
+  /* padding-left: 40px;
     padding-right: 5%; */
-    font-family: 'Roboto Slab', Arial, sans-serif;
-    text-align: center;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  text-align: center;
 }
 
 .title-P {
   color: black;
-  text-shadow:
-    0 0 2px white, /* Closest white glow */
-    0 0 5px #fff,
-    0 0 9px white,
-    0 0 13px #0fa, /* Start of the green glow */
-    0 0 17px #0fa,
-    0 0 20px #0fa,
-    0 0 23px #00CCFF,
-    0 0 27px #00CCFF; /* Furthest green glow */
-    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  text-shadow: 0 0 2px white, /* Closest white glow */ 0 0 5px #fff,
+    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; /* Furthest green glow */
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
   font-size: 45px;
   text-align: center;
   margin-top: 5px;
@@ -72,24 +58,25 @@
   height: 35px;
   width: 35px;
   margin: 15px;
-  color: #00CCFF;
-  display: grid;
-  justify-content: flex-start ;
-  align-items: flex-start;
+  color: #00ccff;
+  /* display: grid; */
+  /* justify-content: flex-start ;
+  align-items: flex-start; */
   /* border: 1px solid #00CCFF;
   border-radius: 1em; */
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  /* border: 1px solid red; */
 }
-
 
 .project-image {
   /* max-width: 100%; */
-  width: 350px; 
+  width: 350px;
   height: 350px;
   /* border: 1px solid #00CCFF; */
-  box-shadow: 0 0 5px #00CCFF,
-                 0 0 15px  #00CCFF,
-                 0 0 25px #00CCFF;
-                 border-radius: 2em;
+  box-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 25px #00ccff;
+  border-radius: 2em;
   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
@@ -102,33 +89,26 @@
   width: 350px;
   margin-left: 0px;
   /* border: 1px solid #00CCFF; */
-
 }
 
 .stack-names {
   color: black;
-  text-shadow:
-    0 0 2px white, /* Closest white glow */
-    0 0 5px #fff,
-    0 0 9px white,
-    0 0 13px #0fa, /* Start of the green glow */
-    0 0 17px #0fa,
-    0 0 20px #0fa,
-    0 0 23px #00CCFF,
-    0 0 27px #00CCFF; /* Furthest green glow */
-    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  text-shadow: 0 0 2px white, /* Closest white glow */ 0 0 5px #fff,
+    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; /* Furthest green glow */
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
   font-size: 25px;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 3px;
-  
+  margin-bottom: 2px;
 }
 
-.stack-container{
-/* border: 1px solid orange; */
-height: 30vh;
-width: 80%;
-margin: 50px;
+.stack-container {
+  border: 1px solid orange;
+  height: 30vh;
+  width: 80%;
+  margin: 50px;
+  margin-top: 20px;
 }
 
 .arrow-btn {
@@ -137,15 +117,15 @@ margin: 50px;
   transform: translateY(-50%);
   z-index: 1;
   background-color: #111;
-  border: 2px solid #00CCFF;
+  border: 2px solid #00ccff;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  color: #00CCFF;
+  color: #00ccff;
   transition: all 0.25s ease-in-out;
   &:hover {
-    background: #00CCFF;
+    background: #00ccff;
     border-color: #111;
     color: #111;
   }
@@ -156,41 +136,67 @@ margin: 50px;
 
 .arrow-btn-left {
   left: 30px;
-} 
+}
 
 .slick-dots {
-  bottom: 10px; 
+  bottom: 10px;
   align-items: center;
-  
 }
 
 .slick-dots li button:before {
-  color: #00CCFF; 
+  color: #00ccff;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #00CCFF; 
+  color: #00ccff;
 }
 
 .stack-box {
-  
   width: 100%;
   height: 82%;
-  /* border: 1px solid green; */
+  border: 1px solid green;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .stack-box :hover {
   color: white;
-
+  transform: scale(0.9);
 }
 
 body {
   background: #111;
 }
 
+.tooltip {
+  visibility: hidden;
+  background-color: #111;
+  color: #00ccff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 10px;
+}
 
+.tech-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 
-
+.LP {
+  border: 1px solid white;
+  height: 30%;
+  width: 100%;
+  align-items: center;
+}
