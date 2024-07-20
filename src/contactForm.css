@@ -12,14 +12,14 @@
 
 .inputs {
     background-color: rgb(252, 250, 250);
-    opacity: 0.5;
+    opacity: 1;
     border: 1px solid black;
     color: black;
     text-shadow: 0 0 2px white, 0 0 5px #fff, 0 0 9px white, 0 0 13px #0fa,
       0 0 17px #0fa, 0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff;
     
 
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Roboto Slab', Arial, sans-serif;
 }
 
@@ -53,12 +53,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 160px;
+    height: 60px;
     margin: 0px;
     position: relative;
     padding: 16px 30px;
     font-size: 1.5rem;
-    color: #00ccff;
+    color: #06c5f5;
     border: 2px solid #00ccff;
     border-radius: 4px;
     text-shadow: 0 0 15px #00ccff;
@@ -67,12 +68,15 @@
     letter-spacing: 0.1rem;
     transition: 0.5s;
     z-index: 1;
+    background-color: black;
+    
   }
   
   .button:hover {
     color: white;
     border: 2px solid white;
     box-shadow: 0 0 20px #00ccff;
+    cursor: pointer;
   }
   
   .button::before {
