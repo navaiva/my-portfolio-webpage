@@ -19,7 +19,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('/send-email', formData)
+        axios.post('http://localhost:5000/send-email', formData)
             .then(response => {
                 alert('Email sent successfully');
                 setFormData({
@@ -55,9 +55,8 @@ const ContactForm = () => {
             </label>
             </div>
             <div className='buttonPosition'>
-            <a className="button" href="#ee" color={ '#00CCFF'} >
-    Send Message
-  </a>
+            <button  type="submit"  className="button" color={ '#00CCFF'} >
+    Send Message </button>
             </div>
             </div>
         </form>
