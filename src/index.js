@@ -9,6 +9,10 @@ import Projects from './Projects';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Skills from './Skills';
+// import 'devicons/css/devicons.css';
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

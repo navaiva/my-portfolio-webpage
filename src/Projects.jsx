@@ -20,6 +20,10 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // for website icon
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; // for GitHub icon
+
 function App() {
   const projects = [
     {
@@ -28,7 +32,7 @@ function App() {
         'An Open Source projet that help make databases management easier',
       imageUrl: SEEqr,
       techs: [
-        { name: 'React', icon: <FaReact size={30} color="#00CCFF" /> },
+        { name: 'React', icon: <FaReact size={30} color="#00CCFF"  /> },
         { name: 'HTML', icon: <FaHtml5 size={30} color="#00CCFF" /> },
         { name: 'CSS', icon: <FaCss3Alt size={30} color="#00CCFF" /> },
         { name: 'Node', icon: <FaNodeJs size={30} color="#00CCFF" /> },
@@ -41,7 +45,7 @@ function App() {
         { name: 'Jest', icon: <SiJest size={30} color="#00CCFF" /> },
         { name: 'Javascript', icon: <FaJsSquare size={30} color="#00CCFF" /> },
         { name: 'MongoDB', icon: <SiMongodb size={30} color="#00CCFF" /> },
-      ], links: [{ name: 'git', icon: 'path' }, {name: 'web', icon: '[path'}
+      ], links: [{ name: 'GitHub', icon: <FontAwesomeIcon icon={faGithub}  color='#00CCFF' />, href: 'https://github.com/open-source-labs/SeeQR-Web' }, {name: 'Website', icon: <FontAwesomeIcon icon={faGlobe} color='#00CCFF' />, href: 'http://www.seeqrapp.com/'}
       ],
     },
     {

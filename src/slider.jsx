@@ -64,9 +64,10 @@ const PSlider = ({ projects }) => {
                   ))}
                 </div>
                 <div className="LP">
-                {project.links.map((link, linkIndex) => (
+                  {project.links.map((link, linkIndex) => (
                     <div key={linkIndex} className="link-icon">
-                      {link.icon}
+                      <a href={link.href}>{link.icon}</a>
+                      <Tooltip text={link.name} />
                     </div>
                   ))}
                 </div>

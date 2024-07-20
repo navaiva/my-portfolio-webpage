@@ -1,0 +1,24 @@
+.slider-container-inf {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .slider-content-inf {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  .slider-skill-inf {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 2rem; /* Adjust icon size */
+    color: #333; /* Default color */
+  }
+  
+  .colored {
+    font-size: 24px; /* Adjust icon size */
+    color: #f00808; /* Adjust icon color */
+  }
