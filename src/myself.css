@@ -29,7 +29,7 @@ canvas {
 
 @media only screen and (max-width: 600px) {
   .right-s {
-    display: none; /* Hidden on screens smaller than 600px */
+    display: none; 
   }
 }
 
@@ -46,9 +46,9 @@ canvas {
 .Sh1,
 .Th1 {
   color: #00ccff;
-  text-shadow: 0 0 2px white, /* Closest white glow */ 0 0 5px #fff,
-    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px #0fa,
-    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; /* Furthest green glow */
+  text-shadow: 0 0 2px white, 0 0 5px #fff,
+    0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; 
 
   font-size: 40px;
   font-family: 'Roboto Slab', Arial, sans-serif;
@@ -88,7 +88,7 @@ canvas {
 .Fh1,
 .Sh1,
 .Th1 {
-  opacity: 0; /* Start invisible */
+  opacity: 0; 
   padding-left: 1px;
 }
 
@@ -107,6 +107,6 @@ canvas {
 
 .Th1 {
   animation: scaleUp 1s ease-out forwards;
-  animation-delay: 2s; /* Start after Sh1 */
+  animation-delay: 2s;
   margin-bottom: 100px;
 }

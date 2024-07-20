@@ -21,8 +21,8 @@ import {
 } from 'react-icons/si';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // for website icon
-import { faGithub } from '@fortawesome/free-brands-svg-icons'; // for GitHub icon
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 
 function App() {
   const projects = [

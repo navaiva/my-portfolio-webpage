@@ -3,10 +3,6 @@
   justify-content: flex-end;
   width: 100%;
   height: 55px;
-  /* box-shadow: 0 0 5px aqua,
-                 0 0 10px aqua,
-                 0 0 10px aqua;
-                 border-radius: 2em; */
   /* border: 1px solid #15f4ee; */
 }
 
@@ -20,14 +16,6 @@
   align-items: flex-center;
 }
 
-/* .threeDots {
-  
-  width: 4%;
-  height: 30px;
-  display: flex;
-  justify-content: flex-center;
-
-} */
 
 .git {
   margin-top: 7px;

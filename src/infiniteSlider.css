@@ -1,24 +1,53 @@
 .slider-container-inf {
     overflow: hidden;
-    white-space: nowrap;
     width: 100%;
+    border: 3px solid purple;
+    height: 95%;
+    position: relative;
   }
   
   .slider-content-inf {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    white-space: nowrap;
+  white-space: nowrap;
+  border: 2px solid white;
+  width: fit-content;
+    border: 2px solid white;
+    height: 99%;
+    animation: scroll-left var(--animation-duration) linear infinite;
   }
-  
+
+
   .slider-skill-inf {
-    display: inline-block;
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
     text-align: center;
-    font-size: 2rem; /* Adjust icon size */
-    color: #333; /* Default color */
+    font-size: 2rem; 
+    flex: 0 0 auto;
+
   }
-  
   .colored {
-    font-size: 24px; /* Adjust icon size */
-    color: #f00808; /* Adjust icon color */
+    font-size: 40px; 
+    color: #00CCFF; 
   }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  :root {
+    --animation-duration: 30s; 
+  }
+
+  /* .slider-content-inf > div:nth-child(3n) {
+    grid-column: span 2;
+  } */
+

@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './infiniteSlider.css';
-// import 'devicons/css/devicons.css'
-// import 'devicon/devicon.min.css';
-// import 'devicon/devicon-colors.css';
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaJs, FaCss3Alt, FaHtml5, FaPython, FaPhp, FaVuejs, FaJava, FaSwift, } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiPostgresql, SiRedux, SiExpress, SiNextdotjs, SiElectron, SiJest, SiThreedotjs, SiNpm, SiDjango, SiTailwindcss, SiSass, SiGithub, SiGit, SiMysql, SiCplusplus, SiApollographql } from 'react-icons/si';
+import { SiTypescript, SiMongodb, SiPostgresql, SiRedux, SiExpress, SiNextdotjs, SiJest, SiThreedotjs, SiNpm, SiDjango, SiTailwindcss, SiSass, SiGithub, SiGit, SiMysql, SiCplusplus, SiApollographql } from 'react-icons/si';
 import { AiFillApi } from 'react-icons/ai';
+import { IoLogoElectron } from "react-icons/io5";
 
 const iconsMapping = {
   JavaScript: FaJs,
@@ -15,7 +13,7 @@ const iconsMapping = {
   AWS: FaAws,
   TypeScript: SiTypescript,
   Jest: SiJest,
-  Electron: SiElectron,
+  Electron: IoLogoElectron,
   MongoDB: SiMongodb,
   PSQL: SiPostgresql,
   Redux: SiRedux,
@@ -44,57 +42,22 @@ const iconsMapping = {
   Apollo: SiApollographql
 };
 
+
+
 const InfiniteSlider = ({ items }) => {
-  const sliderRef = useRef(null);
-  const scrollIntervalRef = useRef(null); 
-
-  useEffect(() => {
-    const slider = sliderRef.current;
-
-    if (!slider) return;
-
-    const startScrolling = () => {
-      const speed = 1;
-      const sliderWidth = slider.scrollWidth / 2; // Total width of the slider
-      let scrollLeft = 0; // Initialize scroll position
-
-      scrollIntervalRef.current = setInterval(() => {
-        scrollLeft += speed;
-
-        if (scrollLeft >= sliderWidth) {
-          scrollLeft = 0;
-        }
-
-        slider.scrollLeft = scrollLeft;
-      }, 16);
-    };
-   
-
-    startScrolling();
-
-    return () => {
-      clearInterval(scrollIntervalRef.current);
-     
-    };
-  }, []);
-
-  const duplicatedItems = [...items, ...items];
+  const duplicatedIcons = [...items, ...items];
 
   return (
-    <div className="slider-container-inf" ref={sliderRef}>
+    <div className="slider-container-inf">
       <div className="slider-content-inf">
-        {duplicatedItems.map((item, index) => {
-           const IconComponent = iconsMapping[item.icon]; return (
-          <div key={`${item.id}-${index}`} className="slider-skill-inf">
-  {IconComponent && <IconComponent className="colored" />}
-            <span>{item.name}</span>
+        {duplicatedIcons.map((item, index) => (
+          <div key={index} className="slider-skill-inf">
+            {iconsMapping[item.icon] && React.createElement(iconsMapping[item.icon], { className: 'colored' })}
           </div>
-        )
-})}
+        ))}
       </div>
     </div>
   );
-
 };
 
 export default InfiniteSlider;

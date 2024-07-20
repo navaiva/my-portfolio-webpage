@@ -1,8 +1,8 @@
 .about-me {
   color: black;
-  text-shadow: 0 0 2px white, /* Closest white glow */ 0 0 5px #fff,
-    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px #0fa,
-    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; /* Furthest green glow */
+  text-shadow: 0 0 2px white, 0 0 5px #fff,
+    0 0 9px white, 0 0 13px #0fa,  0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; 
 
   height: 100vh;
   width: 100%;
@@ -13,9 +13,9 @@
 
 .about {
   color: #00ccff;
-  text-shadow: 0 0 2px black, /* Closest white glow */ 0 0 5px black,
-    0 0 9px white, 0 0 13px #0fa, /* Start of the green glow */ 0 0 17px black,
-    0 0 20px black, 0 0 23px black, 0 0 27px black; /* Furthest green glow */
+  text-shadow: 0 0 2px black,  0 0 5px black,
+    0 0 9px white, 0 0 13px #0fa,  0 0 17px black,
+    0 0 20px black, 0 0 23px black, 0 0 27px black; 
   font-size: 25px;
   padding-left: 40px;
   padding-right: 5%;
