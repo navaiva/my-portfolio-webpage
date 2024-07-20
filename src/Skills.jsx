@@ -1,5 +1,6 @@
 import './skills.css';
-import InfiniteSlider from './InfiniteSlider';
+import InfiniteCarousel from './InfiniteSlider';
+import InfiniteCarousel2 from './InfiniteSlider2';
 
 function App() {
 
@@ -17,37 +18,31 @@ function App() {
     { id: 10, icon: 'Redux', name: 'Redux' },
     { id: 11, icon: 'Express', name: 'Express' },
     { id: 12, icon: 'Node', name: 'Node.js' },
-    { id: 13, icon: 'Three', name: 'Three.js' },
+    { id: 13, icon: 'Git', name: 'Git' },
     { id: 14, icon: 'NPM', name: 'NPM' },
     { id: 15, icon: 'Docker', name: 'Docker' },
     { id: 16, icon: 'Tailwind', name: 'Tailwind CSS' },
     { id: 17, icon: 'SASS', name: 'SASS' },
     { id: 18, icon: 'GitHub', name: 'Github' },
-    { id: 19, icon: 'Git', name: 'Git' },
-    { id: 20, icon: 'API', name: 'C++' },
-    { id: 14, icon: 'NPM', name: 'NPM' },
-    { id: 15, icon: 'Docker', name: 'Docker' },
-    { id: 16, icon: 'Tailwind', name: 'Tailwind CSS' },
-    { id: 17, icon: 'SASS', name: 'SASS' },
-    { id: 18, icon: 'GitHub', name: 'Github' },
-    { id: 19, icon: 'Git', name: 'Git' },
-    { id: 20, icon: 'API', name: 'C++' }
+    { id: 19, icon: 'Webpack', name: 'Webpack'},
+    {id: 20, icon: 'MySQL', name: 'MySQL'}
+   
     
   ];
 
   const techIcons2 = [
-    { id: 1, icon: 'Apollo', name: 'Apollo' },
-    { id: 2, icon: 'Ajax', name: 'Ajax' },
-    { id: 3, icon: 'CPlusPlus', name: 'C++' },
-    { id: 4, icon: 'Java', name: 'Java' },
-    { id: 5, icon: 'Swift', name: 'swift' },
-    { id: 6, icon: 'Vue', name: 'Vue' },
-    { id: 7, icon: 'PHP', name: 'PHP' },
-    { id: 8, icon: 'Python', name: 'Python' },
-    { id: 9, icon: 'CSharp', name: 'C#' },
-    { id: 10, icon: 'Django', name: 'Django' },
-    { id: 11, icon: 'Next', name: 'Next.js' },
-    { id: 12, icon: 'ReactNative', name: 'React Native' },
+    { id: 0, icon: 'Apollo', name: 'Apollo' },
+    { id: 1, icon: 'CPlusPlus', name: 'C++' },
+    { id: 2, icon: 'Java', name: 'Java' },
+    { id: 3, icon: 'Swift', name: 'swift' },
+    { id: 4, icon: 'Vue', name: 'Vue' },
+    { id: 5, icon: 'PHP', name: 'PHP' },
+    { id: 6, icon: 'Python', name: 'Python' },
+    { id: 7, icon: 'CSharp', name: 'C#' },
+    { id: 8, icon: 'Django', name: 'Django' },
+    { id: 9, icon: 'Next', name: 'Next.js' },
+    { id: 10, icon: 'ReactNative', name: 'React Native' },
+    { id: 11, icon: 'Three', name: 'Three.js' },
 
   ]
 
@@ -57,13 +52,13 @@ function App() {
     <h1 className='skills-det'>Skills</h1>
     </div>
     <div className='slider-infinite'>
-    <InfiniteSlider items={techIcons1} speed={30} />
+    <InfiniteCarousel items={techIcons1}  />
     </div>
     <div  className='skills-pre'>
     <h1 className='skills-det'>Skills To Learn</h1>
     </div>
     <div className='slider-infinite'>
-    <InfiniteSlider items={techIcons2} speed={20} />
+    <InfiniteCarousel2 items={techIcons2} />
     </div>
   </div>
   ) 

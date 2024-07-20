@@ -1,58 +1,87 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './infiniteSlider.css';
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaJs, FaCss3Alt, FaHtml5, FaPython, FaPhp, FaVuejs, FaJava, FaSwift, } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiPostgresql, SiRedux, SiExpress, SiNextdotjs, SiJest, SiThreedotjs, SiNpm, SiDjango, SiTailwindcss, SiSass, SiGithub, SiGit, SiMysql, SiCplusplus, SiApollographql } from 'react-icons/si';
-import { AiFillApi } from 'react-icons/ai';
+import { SiTypescript, SiMongodb, SiPostgresql, SiRedux, SiExpress, SiNextdotjs, SiJest, SiThreedotjs, SiNpm, SiDjango, SiTailwindcss, SiSass, SiGithub, SiGit, SiMysql, SiCplusplus, SiApollographql, SiWebpack } from 'react-icons/si';
 import { IoLogoElectron } from "react-icons/io5";
 
-const iconsMapping = {
-  JavaScript: FaJs,
-  CSS: FaCss3Alt,
-  HTML: FaHtml5,
-  React: FaReact,
-  AWS: FaAws,
-  TypeScript: SiTypescript,
-  Jest: SiJest,
-  Electron: IoLogoElectron,
-  MongoDB: SiMongodb,
-  PSQL: SiPostgresql,
-  Redux: SiRedux,
-  Express: SiExpress,
-  Node: FaNodeJs,
-  Next: SiNextdotjs,
-  ReactNative: FaReact,
-  Three: SiThreedotjs,
-  NPM: SiNpm,
-  PHP: FaPhp,
-  Python: FaPython,
-  CSharp: SiCplusplus,
-  Django: SiDjango,
-  Docker: FaDocker,
-  Tailwind: SiTailwindcss,
-  SASS: SiSass,
-  Vue: FaVuejs,
-  GitHub: SiGithub,
-  Git: SiGit,
-  MySQL: SiMysql,
-  Ajax: AiFillApi,
-  CPlusPlus: SiCplusplus,
-  Java: FaJava,
-  Swift: FaSwift,
-  API: AiFillApi,
-  Apollo: SiApollographql
+const iconsObj = {
+  JavaScript: <FaJs size={80} />,
+  CSS: <FaCss3Alt size={80} />,
+  HTML: <FaHtml5 size={80} />,
+  React: <FaReact size={80} />,
+  AWS: <FaAws size={80} />,
+  TypeScript: <SiTypescript size={80} />, 
+  Jest: <SiJest size={80} />,
+  Electron: <IoLogoElectron size={80} />, 
+  MongoDB: <SiMongodb size={80} />,
+  PSQL: <SiPostgresql size={80} />, 
+  Redux: <SiRedux size={80} />, 
+  Express: <SiExpress size={80} />, 
+  Node: <FaNodeJs size={80} />,
+  Three: <SiThreedotjs size={80} />, 
+  NPM: <SiNpm size={80} />,
+  Docker: <FaDocker size={80} />,
+  Tailwind: <SiTailwindcss size={80} />,
+  SASS: <SiSass size={80} />,
+  GitHub: <SiGithub size={80} />,
+  Git: <SiGit size={80} />,
+  Apollo: <SiApollographql size={80} />, 
+  CPlusPlus: <SiCplusplus size={80} />, 
+  Java: <FaJava size={80} />,
+  Swift: <FaSwift size={80} />,
+  Vue: <FaVuejs size={80} />,
+  PHP: <FaPhp size={80} />,
+  Python: <FaPython size={80} />,
+  CSharp: <SiCplusplus size={80} />, 
+  Django: <SiDjango size={80} />, 
+  Next: <SiNextdotjs size={80} />, 
+  ReactNative: <FaReact size={80} />,
+  MySQL: <SiMysql size={80} />,
+  Webpack: <SiWebpack size={80}/>
 };
 
 
 
-const InfiniteSlider = ({ items }) => {
-  const duplicatedIcons = [...items, ...items];
+const InfiniteCarousel = ({ items }) => {
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    let start = null;
+    let previousTimeStamp = 0;
+    const speed = 0.1;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const elapsed = timestamp - previousTimeStamp;
+
+      if (elapsed > 16) { 
+        carousel.scrollLeft += speed * elapsed;
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+          carousel.scrollLeft = 0;
+        }
+        previousTimeStamp = timestamp;
+      }
+
+      requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  }, []);
 
   return (
-    <div className="slider-container-inf">
-      <div className="slider-content-inf">
-        {duplicatedIcons.map((item, index) => (
-          <div key={index} className="slider-skill-inf">
-            {iconsMapping[item.icon] && React.createElement(iconsMapping[item.icon], { className: 'colored' })}
+    <div className="carousel-container" ref={carouselRef}>
+      <div className="carousel-content">
+        {items.map((item, index) => (
+          <div key={index} className="carousel-item">
+            {iconsObj[item.icon]}
+            <p>{item.name}</p>
+          </div>
+        ))}
+        {items.map((item, index) => (
+          <div key={`repeat-${index}`} className="carousel-item">
+            {iconsObj[item.icon]}
+            <p>{item.name}</p>
           </div>
         ))}
       </div>
@@ -60,4 +89,4 @@ const InfiniteSlider = ({ items }) => {
   );
 };
 
-export default InfiniteSlider;
+export default InfiniteCarousel;
