@@ -24,8 +24,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 
-function App() {
-  const projects = [
+const App = () => {
+  let projects = [
     {
       title: 'SeeQR',
       description:
@@ -75,6 +75,7 @@ function App() {
       ],
     },
   ];
+
 
   return (
     <div className="projects">

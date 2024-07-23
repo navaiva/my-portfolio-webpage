@@ -1,66 +1,49 @@
+
 .contactMe {
-    height: 100vh;
-    width: 100%;
-    display: grid;
+  height: auto; 
+  width: 100%;
+  display: grid;
   place-items: center;
-  margin-bottom: 20px;
-    /* border: 1px solid yellow; */
-   
+  padding: 20px;
 }
+
 
 .contactTitle {
-    color: black;
-    text-shadow: 0 0 2px white,  0 0 5px #fff,
-      0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa,
-      0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; 
-    font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
-
-    
+  color: black;
+  text-shadow: 0 0 2px white, 0 0 5px #fff,
+    0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff;
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  font-size: 2.5rem; 
+  text-align: center;
+  margin: 20px 0; 
 }
+
 
 .contactForm {
-    height: 80vh;
-width: 80%;
-box-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 20px #00ccff;
+  width: 90%; 
+  max-width: 800px; 
+  box-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 20px #00ccff;
   border-radius: 2em;
-/* border: 1px solid red; */
-background-image: url('./assets/contactMeForm.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    place-items: center;
-    align-items: center;  
-
+  background-image: url('./assets/contactMeForm.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  padding: 20px; 
 }
+
 
 .contactForm2 {
-    position: relative; 
-    /* border: 1px solid purple; */
-    height: 100%;
-    width: 60%;
-    display: grid;
-    place-items: center;
-    align-items: center; 
-    overflow: hidden;
-    background-color: black;
-    opacity: 0.7;
-    margin: 1px;
-    
-    
-}
-
-.contactForm2::before {
-    content: ''; /* Empty content for pseudo-element */
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent; 
-    opacity: 0; 
-    border-radius: inherit; 
-    z-index: -1; 
+  position: relative;
+  width: 100%; 
+  max-width: 600px; 
+  display: grid;
+  place-items: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+  opacity: 0.7;
+  padding: 20px; 
 }

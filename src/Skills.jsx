@@ -1,8 +1,9 @@
 import './skills.css';
 import InfiniteCarousel from './InfiniteSlider';
 import InfiniteCarousel2 from './InfiniteSlider2';
+import React from 'react';
 
-function App() {
+const App = () => {
 
   const techIcons1 = [
     { id: 0, icon: 'JavaScript', name: 'JavaScript' },

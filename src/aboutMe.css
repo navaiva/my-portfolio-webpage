@@ -1,28 +1,56 @@
-.about-me {
+
+.aboutMe {
   color: black;
   text-shadow: 0 0 2px white, 0 0 5px #fff,
-    0 0 9px white, 0 0 13px #0fa,  0 0 17px #0fa,
-    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; 
-
-  height: 100vh;
+    0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa,
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff;
+  height: auto;
   width: 100%;
   display: grid;
   place-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
+  margin-top: 20px;
 }
 
 .about {
   color: #00ccff;
-  text-shadow: 0 0 2px black,  0 0 5px black,
-    0 0 9px white, 0 0 13px #0fa,  0 0 17px black,
-    0 0 20px black, 0 0 23px black, 0 0 27px black; 
+  text-shadow: 0 0 2px black, 0 0 5px black,
+    0 0 9px white, 0 0 13px #0fa, 0 0 17px black,
+    0 0 20px black, 0 0 23px black, 0 0 27px black;
   font-size: 25px;
-  padding-left: 40px;
-  padding-right: 5%;
+  padding-left: 2rem;
+  padding-right: 2rem;
   font-family: 'Roboto Slab', Arial, sans-serif;
+  text-align: center; 
+  margin-bottom: 50px;
 }
 
 .about-1 {
   font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
-  font-size: 45px;
+  font-size: 3rem;
+  text-align: center; 
+  margin-bottom: 50px;
+}
+
+
+@media (max-width: 1200px) {
+  .about {
+    font-size: 22px;
+  }
+
+  .about-1 {
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    font-size: 20px; 
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+  }
+
+  .about-1 {
+    font-size: 2rem; 
+  }
 }

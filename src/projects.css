@@ -1,17 +1,17 @@
+
 .projects {
-  height: 100vh;
+  height: auto; 
   width: 100%;
   /* border: 1px solid yellow; */
 }
 
 .P-presentation {
   color: black;
-  text-shadow: 0 0 2px white,  0 0 5px #fff,
+  text-shadow: 0 0 2px white, 0 0 5px #fff,
     0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa,
-    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff; 
+    0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff;
   font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
-  font-size: 45px;
+  font-size: 3rem; 
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin: 5px 0;
 }

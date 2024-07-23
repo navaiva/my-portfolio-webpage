@@ -17,7 +17,9 @@ export default function Model(props) {
 
   useFrame((state, delta) => {
     // Rotate the group on the y-axis
-    group.current.rotation.y += delta;
+    if (group.current) {
+      group.current.rotation.y += delta;
+    }
   });
 
   return (

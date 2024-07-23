@@ -1,57 +1,53 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './contactForm.css'
 
+
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+    const [result, setResult] = React.useState("");
+
+    const key = process.env.REACT_APP_EMAIL_KEY
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", key);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
+    const data = await response.json();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post('http://localhost:5000/send-email', formData)
-            .then(response => {
-                alert('Email sent successfully');
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: ''
-                });
-            })
-            .catch(error => {
-                alert('Error sending email');
-                console.error(error);
-            });
-    };
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div classname='formStyle'>
+        <form onSubmit={onSubmit}>
+            <div className='formStyle'>
             <div className='names'>
             <label className='labels'>Name
-                <input className='inputs' type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <input className='inputs' type="text" name="name" required/>
             </label>
             </div>
             <div className='emails'>
             <label className='labels'>
                 Email
-                <input className='inputs' type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input className='inputs' type="email" name="email" required/>
             </label>
             </div>
             <div className='messages'>
             <label className='labels'>
                 Message
-                <textarea className='inputs messagesSpace' name="message" value={formData.message} onChange={handleChange} required></textarea>
+                <textarea className='inputs messagesSpace' name="message" required ></textarea>
             </label>
             </div>
             <div className='buttonPosition'>

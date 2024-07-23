@@ -1,0 +1,147 @@
+
+
+.myself- {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+  /* border: 1px solid red */
+}
+
+.right-s, .left-s {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.right-s {
+  box-shadow: 0 0 5px #00ccff, 0 0 15px #00ccff, 0 0 25px #00ffff;
+  border-radius: 2em;
+  display: none; 
+}
+
+.left-s {
+  display: grid;
+  place-items: center;
+  margin-right: 0; 
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .myself- {
+    flex-direction: row; 
+  }
+
+  .right-s {
+    display: flex;
+  }
+
+  .left-s {
+    margin-right: 2rem; 
+  }
+}
+
+@media (min-width: 768px) {
+  .Fh1, .Sh1, .Th1 {
+    font-size: 2.5rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .Fh1, .Sh1, .Th1 {
+    font-size: 3rem; 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.Fh1, .Sh1, .Th1 {
+  color: #00ccff;
+  text-shadow: 0 0 2px white, 0 0 5px #fff, 0 0 9px white, 0 0 13px #0fa, 0 0 17px #0fa, 0 0 20px #0fa, 0 0 23px #00ccff, 0 0 27px #00ccff;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  opacity: 0;
+  padding-left: 0.1rem;
+}
+
+.Fh1 {
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.Sh1 {
+  animation: slideInFromLeft 1s ease-out forwards;
+  animation-delay: 1s;
+  color: black;
+  font-size: 2.5rem; 
+  border-radius: 0.2rem;
+}
+
+.Th1 {
+  animation: scaleUp 1s ease-out forwards;
+  animation-delay: 2s;
+  margin-bottom: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  .Fh1, .Sh1, .Th1 {
+    font-size: 1.5rem; 
+  }
+}
+
+@media (max-width: 400px) {
+  .Fh1, .Sh1, .Th1 {
+    font-size: 1.2rem; 
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  color: #00ccff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ccff;
+  text-shadow: 0 0 5px #00ccff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

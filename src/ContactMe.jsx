@@ -1,9 +1,10 @@
 import './contactMe.css'
 import ContactForm from './ContactForm'
+import React from 'react'
  
-function App() {
-    return (
-      <div className="contactMe">
+const App = () => {
+  return (
+      <div className="contactMe" >
         <h1 className='contactTitle'>Contact Me</h1>
         <div className='contactForm'>
         <div className='contactForm2'>
@@ -11,8 +12,7 @@ function App() {
         </div>
         </div>
       </div>
-       
-    );
-  }
+  )
+}
   
 export default App;

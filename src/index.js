@@ -2,22 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import TopBar from './TopBar';
-import Myself from './Myself';
+import MySelf from './MySelf';
 import Starfield from 'react-starfield';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Skills from './Skills';
-import ContactMe from './ContactMe'
-
-
-
-
+import ContactMe from './ContactMe';
+import MyProjectR from './MyprojectR';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+function App() {
+
+  return (
     <div>
       <Starfield
         starCount={1500}
@@ -26,11 +25,18 @@ root.render(
         backgroundColor="black"
       />
       <TopBar />
-      <Myself />
+      <MySelf />
       <AboutMe />
       <Projects />
       <Skills />
       <ContactMe />
+      <MyProjectR />
     </div>
+  );
+}
+
+root.render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>
 );
