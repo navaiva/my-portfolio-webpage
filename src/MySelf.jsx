@@ -5,7 +5,6 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls} from '@react-three/drei';
 // import Scene from './Scene';
 import Scene2 from './Scene2'
-import Loading from './Loading';
 
 
 const App = () => {
@@ -18,7 +17,7 @@ const App = () => {
       </div>
       <div className="right-s">
         <Canvas camera={{ position: [0, 0, 150], fov: 60 }}>
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={null}>
             <Scene2 position={[0, -70, 0]} />
           </Suspense>
           <OrbitControls />

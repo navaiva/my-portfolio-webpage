@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import SEEqr from './SEEqr.png';
 import React from 'react';
 import PSlider from './slider';
+import Weather from '../src/assets/Weather.png'
+
 import {
   FaReact,
   FaNodeJs,
@@ -38,10 +40,7 @@ const App = () => {
         { name: 'Node', icon: <FaNodeJs size={30} color="#00CCFF" /> },
         { name: 'Redux', icon: <SiRedux size={30} color="#00CCFF" /> },
         { name: 'Electron', icon: <SiElectron size={30} color="#00CCFF" /> },
-        {
-          name: 'Typescript',
-          icon: <SiTypescript size={30} color="#00CCFF" />,
-        },
+        { name: 'Typescript',icon: <SiTypescript size={30} color="#00CCFF" />,},
         { name: 'Jest', icon: <SiJest size={30} color="#00CCFF" /> },
         { name: 'Javascript', icon: <FaJsSquare size={30} color="#00CCFF" /> },
         { name: 'MongoDB', icon: <SiMongodb size={30} color="#00CCFF" /> },
@@ -52,7 +51,7 @@ const App = () => {
       title: 'WeatherFY',
       description:
         'An interactive and creative way to see the weather and plan your day!',
-      imageUrl: 'path/to/image2.jpg',
+      imageUrl: Weather,
       techs: [
         { name: 'React', icon: <FaReact size={30} color="#00CCFF" /> },
         { name: 'HTML', icon: <FaHtml5 size={30} color="#00CCFF" /> },
@@ -61,7 +60,7 @@ const App = () => {
         { name: 'Javascript', icon: <FaJsSquare size={30} color="#00CCFF" /> },
         { name: 'Webpack', icon: <SiWebpack size={30} color="#00CCFF" /> },
       ],
-      links: [{ name: 'git', icon: 'path' }, {name: 'web', icon: '[path'}
+      links: [{ name: 'GitHub', icon:  <FontAwesomeIcon icon={faGithub}  color='#00CCFF' />, href:'https://github.com/navaiva/weather-app-solo-project'},
       ],
     },
     {
@@ -71,7 +70,7 @@ const App = () => {
       techs: [
         { name: 'React', icon: 'path/to/react-icon.png' },
         { name: 'CSS', icon: 'path/to/css-icon.png' },
-      ], links: [{ name: 'git', icon: 'path' }, {name: 'web', icon: '[path'}
+      ], links: [{ name: 'git', icon: <FontAwesomeIcon icon={faGithub}  color='#00CCFF' /> },
       ],
     },
   ];
