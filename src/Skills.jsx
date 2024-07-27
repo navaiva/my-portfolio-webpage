@@ -1,6 +1,6 @@
 import './skills.css';
 import InfiniteCarousel from './InfiniteSlider';
-import InfiniteCarousel2 from './InfiniteSlider2';
+// import InfiniteCarousel2 from './InfiniteSlider2';
 import React from 'react';
 
 const App = () => {
@@ -31,21 +31,21 @@ const App = () => {
     
   ];
 
-  const techIcons2 = [
-    { id: 0, icon: 'Apollo', name: 'Apollo' },
-    { id: 1, icon: 'CPlusPlus', name: 'C++' },
-    { id: 2, icon: 'Java', name: 'Java' },
-    { id: 3, icon: 'Swift', name: 'swift' },
-    { id: 4, icon: 'Vue', name: 'Vue' },
-    { id: 5, icon: 'PHP', name: 'PHP' },
-    { id: 6, icon: 'Python', name: 'Python' },
-    { id: 7, icon: 'CSharp', name: 'C#' },
-    { id: 8, icon: 'Django', name: 'Django' },
-    { id: 9, icon: 'Next', name: 'Next.js' },
-    { id: 10, icon: 'ReactNative', name: 'React Native' },
-    { id: 11, icon: 'Three', name: 'Three.js' },
+  // const techIcons2 = [
+  //   { id: 0, icon: 'Apollo', name: 'Apollo' },
+  //   { id: 1, icon: 'CPlusPlus', name: 'C++' },
+  //   { id: 2, icon: 'Java', name: 'Java' },
+  //   { id: 3, icon: 'Swift', name: 'swift' },
+  //   { id: 4, icon: 'Vue', name: 'Vue' },
+  //   { id: 5, icon: 'PHP', name: 'PHP' },
+  //   { id: 6, icon: 'Python', name: 'Python' },
+  //   { id: 7, icon: 'CSharp', name: 'C#' },
+  //   { id: 8, icon: 'Django', name: 'Django' },
+  //   { id: 9, icon: 'Next', name: 'Next.js' },
+  //   { id: 10, icon: 'ReactNative', name: 'React Native' },
+  //   { id: 11, icon: 'Three', name: 'Three.js' },
 
-  ]
+  // ]
 
   return (
 <div className="skills">
@@ -54,12 +54,6 @@ const App = () => {
     </div>
     <div className='slider-infinite'>
     <InfiniteCarousel items={techIcons1}  />
-    </div>
-    <div  className='skills-pre'>
-    <h1 className='skills-det'>Skills To Learn</h1>
-    </div>
-    <div className='slider-infinite'>
-    <InfiniteCarousel2 items={techIcons2} />
     </div>
   </div>
   ) 

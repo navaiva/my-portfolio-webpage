@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import SEEqr from '../src/assets/SEEqr.png';
 import React from 'react';
 import PSlider from './slider';
-import Weather from '../src/assets/Weather.png'
+import screen from '../src/assets/screen.png'
 import rsvp from '../src/assets/rsvps.png'
 import RS from '../src/assets/rs.png'
 
@@ -70,7 +70,7 @@ const App = () => {
       title: 'WeatherFY',
       description:
         'An interactive and creative way to see the weather and plan your day!',
-      imageUrl: Weather,
+      imageUrl: screen,
       techs: [
         { name: 'React', icon: <FaReact size={30} color="#00CCFF" /> },
         { name: 'HTML', icon: <FaHtml5 size={30} color="#00CCFF" /> },
