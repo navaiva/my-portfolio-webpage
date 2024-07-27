@@ -1,10 +1,12 @@
 import './projects.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import SEEqr from './SEEqr.png';
+import SEEqr from '../src/assets/SEEqr.png';
 import React from 'react';
 import PSlider from './slider';
 import Weather from '../src/assets/Weather.png'
+import rsvp from '../src/assets/rsvps.png'
+import RS from '../src/assets/rs.png'
 
 import {
   FaReact,
@@ -20,6 +22,8 @@ import {
   SiWebpack,
   SiElectron,
   SiTypescript,
+  SiTailwindcss,
+  SiPostgresql
 } from 'react-icons/si';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,6 +52,21 @@ const App = () => {
       ],
     },
     {
+      title: 'RSVPEngine',
+      description: 'a sophisticated event management application',
+      imageUrl: rsvp,
+      techs: [
+        { name: 'React', icon: <FaReact size={30} color="#00CCFF"  /> },
+        { name: 'CSS', icon: <FaCss3Alt size={30} color="#00CCFF" /> },
+        { name: 'Javascript', icon: <FaJsSquare size={30} color="#00CCFF" /> },
+        { name: 'HTML', icon: <FaHtml5 size={30} color="#00CCFF" />  },
+        { name: 'Redux', icon: <SiRedux size={30} color="#00CCFF" /> },
+        { name: 'MongoDB', icon: <SiMongodb size={30} color="#00CCFF" />, },
+        { name: 'Webpack', icon: <SiWebpack size={30} color="#00CCFF" /> },
+      ], links: [{ name: 'git', icon: <FontAwesomeIcon icon={faGithub}  color='#00CCFF' />, href: 'https://github.com/EventPulse/RSVPEngine' },
+      ],
+    },
+    {
       title: 'WeatherFY',
       description:
         'An interactive and creative way to see the weather and plan your day!',
@@ -64,15 +83,26 @@ const App = () => {
       ],
     },
     {
-      title: 'Project 3',
-      description: 'Description for project 2.',
-      imageUrl: 'path/to/image2.jpg',
+      title: 'RideSafe - in Progress',
+      description:
+        'An app to track you motorcycle routes of find events close to you!',
+      imageUrl: RS,
       techs: [
-        { name: 'React', icon: 'path/to/react-icon.png' },
-        { name: 'CSS', icon: 'path/to/css-icon.png' },
-      ], links: [{ name: 'git', icon: <FontAwesomeIcon icon={faGithub}  color='#00CCFF' /> },
+        { name: 'React', icon: <FaReact size={30} color="#00CCFF" /> },
+        { name: 'HTML', icon: <FaHtml5 size={30} color="#00CCFF" /> },
+        { name: 'CSS', icon: <FaCss3Alt size={30} color="#00CCFF" /> },
+        { name: 'Node', icon: <FaNodeJs size={30} color="#00CCFF" /> },
+        { name: 'Javascript', icon: <FaJsSquare size={30} color="#00CCFF" /> },
+        { name: 'Typescript', icon: <SiTypescript size={30} color="#00CCFF" /> },
+        { name: 'MongoDB', icon: <SiMongodb size={30} color="#00CCFF" />, },
+        { name: 'Tailwind', icon: <SiTailwindcss size={30} color="#00CCFF" />, },
+        { name: 'PostgreSQL', icon: <SiPostgresql size={30} color="#00CCFF" />, },
+        { name: 'React Native', icon: <FaReact size={30} color="#00CCFF" />, },
+      ],
+      links: [{ name: 'Website', icon: ','},
       ],
     },
+    
   ];
 
 

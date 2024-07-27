@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { useInView } from 'react-intersection-observer';
 import './index.css';
 import TopBar from './TopBar';
 import MySelf from './MySelf';
@@ -14,6 +15,26 @@ import MyProjectR from './MyprojectR';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+function Section({ children }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.1, // Percentage of the component visible to trigger
+  });
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function App() {
 
   return (
@@ -25,11 +46,11 @@ function App() {
         backgroundColor="black"
       />
       <TopBar />
-      <MySelf />
-      <AboutMe />
-      <Projects />
-      <Skills />
-      <ContactMe />
+      <Section><MySelf /></Section>
+      <Section><AboutMe /></Section>
+      <Section><Projects /></Section>
+      <Section><Skills /></Section>
+      <Section><ContactMe /></Section>
       <MyProjectR />
     </div>
   );
